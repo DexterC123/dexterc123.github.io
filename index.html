@@ -10,40 +10,48 @@
 
 <body>
 
-  <section>
-    <h1>Home</h1>
+  <section class="home">
+    <h1 class="barry">Home</h1>
   </section>
-  <section>
+  <section class="step1">
+    <div class="topright"> 1 </div>
     <h2>How to Import Assets from Maya to Spark AR</h2>
     <p>Step 1: First, make your asset in maya. You can make anything in maya and it will be brought into Spark AR, given that you do the following steps correctly. Please note that any animations or moving parts won’t cross over onto Spark AR, so you shouldn’t waste time and effort doing this.</p>
   </section>
-  <section>
+  <section class="step2">
+    <div class="topright"> 2 </div>
 <p>Step 2: Click ‘File’ and then ‘Export’ and make sure to change the file type to FBX or OBJ. Next choose the destination for your asset. Desktop works just fine.</p>
 <img src="./assets/ExportAll.png" alt="">
 <img src="./assets/ExportFBX.png" alt="">
 </section>
-<section>
+<section class="step3">
+  <div class="topright"> 3 </div>
 <p>Step 3: Open Spark AR and then you can simply drag and drop your FBX or OBJ onto the ‘Assets’ tab, then onto your ‘Scene’ tab.</p>
 </section>
-<section>
+<section class="step4">
+  <div class="topright"> 4 </div>
 <p>Step 4: Now you should be able to see your asset in your Scene, well done, you have successfully imported a 3D asset from Maya into Spark AR.</p>
 </section>
 </body>
-<section>
+<section class="step5">
+  <div class="topright"> 1 </div>
   <h2>How to Make Interactive Face mask/paint.</h2>
   <p>Step 1: Find the images you want to use. Be  sure to rename them so they are all in order, e.g “image_01” … “image_02” … “image_03” etc. You can select as many images as you’d like.</p>
 </section>
-<section>
+<section class="step6">
+  <div class="topright"> 2 </div>
 <p>Step 2: Add a face mesh by clicking ‘Insert’ in the top corner, then click 'face mesh'. </p>
 <img src="./assets/FaceMeshAddingIn.png" alt="">
 </section>
-<section>
+<section class="step7">
+  <div class="topright"> 3 </div>
 <p>Step 3: Find your images, and highlight all of your images you want to use and tick the “sequence” box. This will import your images as a group. Now make sure you have 'default material' selected, this is the material of the facemesh. Then click on the drop down arrow from ‘Materials’ and then click ‘Texture Choose File’ on the left of the screen.</p>
 <img src="./assets/DemoOfHowToImportLists.png" alt="">
 <img src="./assets/defaultmaterial.png" alt="">
 <img src="./assets/changematerial.png" alt="">
 </section>
-<section>
+<section class="step8">
+  <div class="topright"> 4 </div>
 <p>Step 4: Now you should be able to see your face mesh flickering with your images. You can change the FPS if you want, or you can add interactivity so that you change the image by tapping the face. If this is the case add the following commands in ‘Patch Editor’.</p>
 <img src="./assets/PatchEditor.png" alt="">
 <img src="./assets/firstTestWhitehatoLogoCopy.png" alt="">
@@ -53,6 +61,40 @@
   <video src="./assets/MeTestingFilter.mp4" controls="controls" autoplay> </video>
 </section>
 <!-- /* <img src="./assets/PatchEditor.png" alt=""> -->
+
+<script type="text/javascript">
+    // some script goes here
+    let sections = document.querySelectorAll('section')
+
+    // loop through the selected results
+    for (var i = 0; i < sections.length; i++) {
+      // add some event to the element
+      sections[i].addEventListener('click', sectionClicked.bind(null, i),true)
+    }
+
+    function sectionClicked(indexOfSection, event){
+      event.stopPropagation()
+      console.log(indexOfSection, event)
+      activateElementBasedOnIndex(indexOfSection)
+    }
+
+    function activateElementBasedOnIndex(index) {
+      for (var i = 0; i < sections.length; i++) {
+        if (i == index) {
+          sections[i].classList.add('current')
+          sections[i].classList.remove('previous')
+        } else if (i < index) {
+          sections[i].classList.add('previous')
+          sections[i].classList.remove('current')
+        } else {
+          sections[i].classList.remove('previous')
+          sections[i].classList.remove('current')
+        }
+      }
+    }
+
+  </script>
+
 </body>
 
 </html>
