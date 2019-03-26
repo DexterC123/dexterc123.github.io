@@ -12,7 +12,7 @@ html, body {
 h1 {
   /*font-family: 'Monoton', 'cursive';*/
   font-family: 'Helvetica';
-  font-size: 211px;
+  font-size: 300px;
   color: orangered;
   transform: rotate(270deg);
 }
@@ -49,16 +49,21 @@ section{
   border: 10px solid darkred;
 } */
 
+.imgborder {
+border: 1.5px solid black;
+ position: absolute;
+}
 
 .barry {
   background: orangered;
   position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 211px;
+  bottom: -80px;
+  left: -140px;
+  font-size: 300px;
   font-family: 'Helvetica';
   font-weight: bolder;
   -webkit-text-stroke: 3px white;
+  letter-spacing: -0.1em;
 }
 
 .home {
@@ -222,7 +227,8 @@ section {
 
 section[class*='step']:hover{
   color:orange;
-  transform: rotate(2.5deg);
+  transform: rotate(1.5deg);
+  transform-origin: middle left;
 }
 
 .topright {
