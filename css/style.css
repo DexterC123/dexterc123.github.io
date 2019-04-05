@@ -12,7 +12,7 @@ html, body {
 h1 {
   /*font-family: 'Monoton', 'cursive';*/
   font-family: 'Helvetica';
-  font-size: 300px;
+  font-size: 200px;
   color: orangered;
   transform: rotate(270deg);
 }
@@ -29,10 +29,20 @@ h3 {
   color: black;
 }
 
+#demobox {
+  background-color: #000000 ;
+}
+
 p {
   font-family: 'Helvetica';
   font-size: 25px;
   color: black;
+}
+
+p2 {
+  font-family: 'Helvetica';
+  font-size: 25px;
+  color: orangered;
 }
 
 section{
@@ -258,10 +268,21 @@ section.page-2 {
   left: 5%;
   z-index:98;
 } */
+
+th, td {
+border: solid 1.5px black;
+}
+
+
+
             img {
                 max-width:40%;
                         height:auto;
             }
+
+
+
+
 
             video {
                 max-width:50%;
