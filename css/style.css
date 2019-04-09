@@ -83,6 +83,15 @@ border: 1.5px solid black;
   letter-spacing: -0.1em;
 }
 
+.dexter {
+  background: orangered;
+  position: absolute;
+  bottom: -320px;
+  left: 290px;
+  max-width: 840px;
+  height:auto;
+}
+
 .home {
   background: orangered;
   border: 1.3px solid darkred;
@@ -276,10 +285,9 @@ border: solid 1.5px black;
 
 
             img {
-                max-width:40%;
+                max-width:600px;
                         height:auto;
             }
-
 
 
 
