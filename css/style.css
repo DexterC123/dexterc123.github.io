@@ -210,6 +210,8 @@ transition: .5s ease-in-out all;
 z-index:20;
 }
 
+.entry-content img { border: #000000 2px solid; }
+
 section.current {
   /*left: -0.1%; */
 /*  left: 30%; */
