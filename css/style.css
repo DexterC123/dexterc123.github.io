@@ -292,6 +292,8 @@ border: solid 1.5px black;
             }
 
 
+            .border { border-width: 9px; border-color: black; border-style: solid; }
+
 
 
             video {
