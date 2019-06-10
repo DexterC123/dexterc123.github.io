@@ -9,6 +9,13 @@ html, body {
   overflow: hidden;
 }
 
+hr {
+height: 5px;
+color: black;
+background-color: black;
+border: none;
+}
+
 h1 {
   /*font-family: 'Monoton', 'cursive';*/
   font-family: 'Helvetica';
